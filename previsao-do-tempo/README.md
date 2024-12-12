@@ -7,9 +7,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-# DevClub Previsão do Tempo
-
-# DevClub Previsão do Tempo
+# Previsão do Tempo
 
 Este é um projeto desenvolvido com React JS que fornece a previsão do tempo atual e para os próximos 5 dias de uma cidade. O aplicativo consome dados da API OpenWeatherMap para fornecer informações como temperatura, umidade, sensação térmica, pressão atmosférica e descrição do clima.
 
