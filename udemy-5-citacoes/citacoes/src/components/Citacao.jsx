@@ -7,23 +7,21 @@ const Citacao = ({texto, autor}) => {
 
     async function traduzirCitacao(idioma) {
         try {
-            const resposta = await fetch("https://libretranslate.de/translate", {
+            const resposta = await fetch("https://api.funtranslations.com/translate/yoda.json?text=" + encodeURIComponent(texto), {
                 method: "POST",
-                body: JSON.stringify({
-                    q: texto,
-                    source: "pt",
-                    target: idioma,
-                }),
-                headers: { "Content-Type": "application/json"}
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
             });
 
             const data = await resposta.json();
 
-            setTraducao(data.translatedText);
-        }catch(error) {
-            console.log("Erro ao traduzir", error)
+            // Verifique se a tradução está no formato esperado
+            setTraducao(data.contents.translated);
+        } catch (error) {
+            console.log("Erro ao traduzir", error);
         }
-}
+    }
 
     return (
         <div>
